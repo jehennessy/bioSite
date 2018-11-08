@@ -8,11 +8,14 @@
 
 html {
   background-color: #374359;
+  font-size: 1em;
 }
 
 .container {
   width: 100%;
 }
+
+/* Header */
 
 header {
   width: 100%;
@@ -64,6 +67,8 @@ li {
   font-weight: 700;
   text-decoration: none;
 }
+
+/* Font Styles */
 
 h1, h2 {
   color: #EDE600;
@@ -127,6 +132,8 @@ p, figcaption, li a{
   font-weight: 700;
 }
 
+/* Figure Styles */
+
 figure {
   width: 100%;
   height: auto;
@@ -139,6 +146,8 @@ figcaption {
   text-align: center;
   padding: 20px;
 }
+
+/* Body */
 
 #middle-container {
   margin-top: 150px;
@@ -192,6 +201,8 @@ article {
   width: 90%;
 }
 
+/* Image Grid */
+
 #grid-container {
   width: 100%;
   height: 750px;
@@ -226,23 +237,11 @@ article {
   vertical-align: middle;
 }
 
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
+/* Footer */
 
 footer {
   width: 100%;
-  height: 350px;
+  height: 450px;
   background-color: #EDE600;
   margin-top: 150px;
   padding-top: 50px;
@@ -269,5 +268,116 @@ iframe {
   text-align: center;
   font-style: italic;
   width: 90%;
-  margin: 160px auto 0 auto;
+  margin: 100px auto 0 auto;
+}
+
+/* Hover effects */
+
+#link:hover, #fund-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Tablet Layout */
+
+@media screen and (max-width: 1200px) {
+  
+/* Header */
+    
+  header {
+    height: auto;
+    }
+    
+  #header-box {
+    width: 55%;
+    height: 400px;
+  }    
+    
+  h1 {
+    font-size: 4.236em;
+    margin-bottom: 0.2em;
+  }
+  
+  h1 br {
+    display: none;
+  }
+    
+  #video {
+    display: block;
+    width: 100%;
+    z-index: 10;
+  }
+
+  nav {
+    width: 30%;
+  }
+    
+/* Body */
+    
+  #middle-container {
+    margin-top: 100px;
+  }
+
+  article {
+    width: 80%;
+    max-width: 800px;
+    height: 1500px;
+    padding: 50px;
+  }
+    
+  #text-box, #figure-middle {
+    display: block;
+    margin: auto;
+    }
+    
+  #middle-photo {
+    padding-top: 10px;    
+    }
+/* Image Grid */
+  
+  #grid-container {
+    margin-top: 100px;
+    }
+  .column {
+    flex: 40%;
+    max-width: 40%;
+  }
+
+/* Footer */
+  footer {
+    height: 700px;
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  #youtube-container {
+    margin: 20px auto;
+    width: 85%;
+  }
+
+  iframe {
+    display: block;
+    margin: auto;
+  }
+
+  #link-container {
+    width: 100%;
+    display: block;
+    margin: 50px auto;
+  }
+
+}
+
+
+/* Mobile Layout */
+
+@media screen and (max-width: 600px) {
+    
+
+    
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
