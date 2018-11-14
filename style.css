@@ -19,26 +19,26 @@ html {
 
 header {
   width: 100%;
-  height: 810px;
-  margin-top: 0;
+  height: auto;
+  margin: 0;
 }
 
 #header-box {
   background-image: linear-gradient( to right, #434343, transparent 90%);
   width: 30%;
-  height: 770px;
+  height: 100%;
   margin: 0;
-  padding: 20px;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 10;
 }
 
 #video {
-  display: inline-block;
+  position: inherit;
   min-width: 100%;
-  min-height: 100%;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -79,7 +79,7 @@ h1 {
   font-size: 6.854em;
   line-height: 1em;
   letter-spacing: 3px;
-  margin-bottom: 0.5em;
+  margin: 20px 0 0.5em 20px;
 }
 
 h2, blockquote{
@@ -124,6 +124,10 @@ p, figcaption, li a{
   font-size: 1em;
   line-height: 2em;
   color: #fff;
+}
+
+p {
+  margin: 20px 0 20px 20px;
 }
 
 #fund-link {
@@ -285,12 +289,14 @@ iframe {
 /* Header */
     
   header {
-    height: auto;
+    max-height: 600px;
     }
     
   #header-box {
     width: 55%;
-    height: 400px;
+    height: 80%;
+    max-height: 400px;
+    overflow-x: scroll;
   }    
     
   h1 {
@@ -303,7 +309,6 @@ iframe {
   }
     
   #video {
-    display: block;
     width: 100%;
     z-index: 10;
   }
@@ -374,10 +379,86 @@ iframe {
 
 @media screen and (max-width: 600px) {
     
+  
+/* Header */
+    
+  header {
+    max-height: 1000px;
+    }
+    
+  #header-box {
+    width: 70%;
+    height: auto;
+    overflow-y: scroll;
+    display: block;
+    position: inherit;
 
+  }  
+    
+  nav {
+    display: block;   
+    }
+/* Body */
+    
+  article {
+    width: 95%;
+    height: auto;
+    padding: 50px 0px;
+  }
+    
+  #text-box {
+
+    width: 100%;
+    height: auto;
+    }
+    
+  h2 {
+    line-height: 1.5em;
+    }
+    
+  #figure-middle {
+    margin: auto;
+    height: auto;
+    width: 95%;
+    }
+    
+  #middle-photo {
+    padding-top: 10px; 
+    width: 80%;
+    }
+    
+  #middle-cap { 
+    width: 60%; 
+    margin: auto;
+    }
+/* Image Grid */
+  
+  #grid-container {
+    margin-top: 100px;
+    }
     
   .column {
-    flex: 100%;
-    max-width: 100%;
+    flex: 90%;
+    max-width: 90%;
+    margin: auto;
+  }
+
+/* Footer */
+    
+  footer {
+    width: 100%;
+    height: 650px;
+    padding: 10px 0px;
+  }
+
+#youtube-container {
+    width: 95%;
+  }
+    
+  iframe {
+    width: 300px;
+    height: 175px;
+    display: block;
+    margin: auto;
   }
 }
